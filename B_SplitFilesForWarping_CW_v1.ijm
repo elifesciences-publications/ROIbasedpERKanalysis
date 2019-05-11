@@ -23,7 +23,7 @@ for (i=0; i<list.length; i++){
     rename("Image");
   	
     maximum = pow(2, bitDepth())-1; 
-	setMinAndMax(0, maximum);
+    setMinAndMax(0, maximum);
 
     // run("Flip Vertically", "stack");
     // run("Rotate 90 Degrees Right", "stack");
@@ -37,50 +37,50 @@ for (i=0; i<list.length; i++){
         otherimage = "C" + otherchannel + "-Image";
     	
         selectWindow(tERKimage); // select the tERK Channel
-		saveName = target_dir + list[i] + "_01.nrrd"; // assign Y suffix number
-		run("Reverse");
-		run("Nrrd ... ", "nrrd=[saveName]");
-		close();
+        saveName = target_dir + list[i] + "_01.nrrd"; // assign Y suffix number
+        run("Reverse");
+        run("Nrrd ... ", "nrrd=[saveName]");
+        close();
 		
-		selectWindow(pERKimage);
-		saveName = target_dir + list[i] + "_02.nrrd";
-		run("Reverse");
-		run("Nrrd ... ", "nrrd=[saveName]");
-		close();
+        selectWindow(pERKimage);
+        saveName = target_dir + list[i] + "_02.nrrd";
+        run("Reverse");
+        run("Nrrd ... ", "nrrd=[saveName]");
+        close();
 		
-		selectWindow(otherimage);
-		saveName = target_dir + list[i] + "_03.nrrd";
-		run("Reverse");
-		run("Nrrd ... ", "nrrd=[saveName]");
-		close();
+        selectWindow(otherimage);
+        saveName = target_dir + list[i] + "_03.nrrd";
+        run("Reverse");
+        run("Nrrd ... ", "nrrd=[saveName]");
+        close();
 		
     }   else if (nImages == 2){
 
         tERKimage = "C" + tERKchannel + "-Image";
     	pERKimage = "C" + pERKchannel + "-Image";
 		
-		selectWindow(tERKimage);
-		saveName = target_dir + list[i] + "_01.nrrd";
-		run("Reverse");
-		run("Nrrd ... ", "nrrd=[saveName]");
-		close();
+        selectWindow(tERKimage);
+        saveName = target_dir + list[i] + "_01.nrrd";
+        run("Reverse");
+        run("Nrrd ... ", "nrrd=[saveName]");
+        close();
 		
-		selectWindow(pERKimage);
-		saveName = target_dir + list[i] + "_02.nrrd";
-		run("Reverse");
-		run("Nrrd ... ", "nrrd=[saveName]");
-		close();
+        selectWindow(pERKimage);
+        saveName = target_dir + list[i] + "_02.nrrd";
+        run("Reverse");
+        run("Nrrd ... ", "nrrd=[saveName]");
+        close();
 		
 	}   else {
 		
-		exit("ERROR: not a 2 or 3 channel image");
+        exit("ERROR: not a 2 or 3 channel image");
 	}
 
     while (nImages > 0){
     close();
 	}
 	
-	run("Collect Garbage");
+    run("Collect Garbage");
 }
 
 setBatchMode(false);

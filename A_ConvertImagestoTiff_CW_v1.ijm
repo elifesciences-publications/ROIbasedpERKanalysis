@@ -12,5 +12,5 @@ for (i=0; i<list.length; i++){
     Image = source_dir + list[i];
     run("Bio-Formats Importer", "open='"+ Image +"' color_mode=Default view=Hyperstack stack_order=XYCZT");
     saveAs("tiff", target_dir + "/" + list[i] + ".tiff");
- 	close();
+    close();
 }
