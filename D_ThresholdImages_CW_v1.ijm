@@ -40,22 +40,22 @@ for (i=0; i<list.length+1; i++) {
     setSlice(round((maxslice-minslice)/2));
     resetMinAndMax();
 
-	// These parameters may need be optimized for your images
+    // These parameters may need be optimized for your images
     run("Subtract Background...", "rolling = 100 stack");
     run("Enhance Contrast", "saturated=0.2"); //up to 0.4
     run("Smooth", "stack");
     run("Gaussian Blur...", "sigma=0.2 stack");
 
-	//Thresholding and Masking
+    //Thresholding and Masking
     setThreshold(0, threshold);
     run("Convert to Mask", "method=Default background=Default");
     run("Make Binary", "method=Default background=Default");
 
-	// The following functions are used to further segment particles into individual units 
-	// You don't necessarily need to perform these operations, but they seem to work well 
-	// Open
+    // The following functions are used to further segment particles into individual units 
+    // You don't necessarily need to perform these operations, but they seem to work well 
+    // Open
     run("Open", "stack");
-	// Erode
+    // Erode
     run("Erode", "stack");
 	// Watershed
     run("Watershed", "stack");
