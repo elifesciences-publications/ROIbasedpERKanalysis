@@ -9,7 +9,7 @@
 // A good threshold will lead to segmentation of individual cells/small clusters
 // It also depends on bit depth of your images
 // IMPORTANT: Some parameters may need to be optimized based on your image resolution/quality.
-// Particularly for background subtraction (Line 37) and contrast saturation (Line 38)
+// Particularly for background subtraction (Line 44) and contrast saturation (Line 45)
 
 // Specify threshold below
 threshold = 2500;  //2500 for test dataset 
