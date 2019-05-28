@@ -74,9 +74,12 @@ for (i=0; i<list.length+1; i++) {
     selectWindow("Log");
     saveAs("Text", target_dir + "/" + list[i] + ".txt");
     run("Close"); 
+    selectWindow("Log");
+    run("Close"); 
+    
     run("Clear Results");
     run("Close All"); 	
-    	
+
     showProgress(i, list.length);
     run("Collect Garbage");
 }
