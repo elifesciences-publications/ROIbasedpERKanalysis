@@ -1,5 +1,5 @@
 // This script runs a thresholding algorithm over your pERK images
-// Works for both registered and unregistered images
+// Works for registered images  (only difference from unregistered is foldername and you might have to change minslice/maxslice etc)
 // The output is a binary image where active cells are black
 
 // THRESHOLDING INSTRUCTIONS
