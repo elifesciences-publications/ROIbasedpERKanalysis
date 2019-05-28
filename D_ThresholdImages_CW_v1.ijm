@@ -57,7 +57,7 @@ for (i=0; i<list.length+1; i++) {
     run("Open", "stack");
     // Erode
     run("Erode", "stack");
-	// Watershed
+    // Watershed
     run("Watershed", "stack");
 
     // save
