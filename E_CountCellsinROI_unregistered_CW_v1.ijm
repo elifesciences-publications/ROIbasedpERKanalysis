@@ -1,6 +1,7 @@
-// this is for use on unregistered images saved in a folder called <Tiffs>
+// this is for use on unregistered images that were previously split by channel
+// D_ThresholdImages_unregistered_CW_v1 must have been performed.
 // You will need to define ROI for EACH image
-// ence no reference image needed
+// hence no reference image needed
 
 // You can change startnum, i.e. file at which you want to begin the loop
 // as you might make a mistake in between and need to kill the script

@@ -1,6 +1,6 @@
 // this is for use on registered images, so that you only need to define ROIs once
 // Use CountCellsinROI_unregistered_CW_v1 if you have unregistered images
-
+// D_ThresholdImages_registered_CW_v1 must have been performed.
 // IMPORTANT: Reference image needs to be in <Ref> folder under Registered Tiffs
 // Order of selection is how the data will be ordered 
 // E.g. left mLH, right mLH, left lLH, right lLH
